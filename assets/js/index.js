@@ -5,7 +5,7 @@ const projects = [
         description: "Aplikasi buku tamu untuk menambahkan dan menampilkan pesan pengunjung.",
         technologies: ["HTML", "CSS", "JavaScript"],
         image: "./assets/images/guest-book.png",
-        githubUrl: "#",
+        githubUrl: "https://github.com/RadiV22/Interactive_guest_book",
         demoUrl: "#",
         featured: true,
     },
@@ -14,7 +14,7 @@ const projects = [
         description: "Dashboard untuk menampilkan, mencari, dan menghitung rata-rata nilai siswa.",
         technologies: ["HTML", "CSS", "TypeScript"],
         image: "./assets/images/student-dashboard.png",
-        githubUrl: "#",
+        githubUrl: "https://github.com/RadiV22/Student_Dashboard_Typescript",
         demoUrl: "#",
         featured: true,
     },
@@ -23,7 +23,7 @@ const projects = [
         description: "Aplikasi pencatatan pengeluaran dengan penyimpanan data menggunakan Local Storage.",
         technologies: ["HTML", "CSS", "JavaScript", "Local Storage"],
         image: "./assets/images/expense-tracker.png",
-        githubUrl: "#",
+        githubUrl: "https://github.com/RadiV22/Expense_tracker",
         demoUrl: "#",
         featured: true,
     },
@@ -32,7 +32,7 @@ const projects = [
         description: "Landing page responsive untuk memperkenalkan dan menjual produk gaming.",
         technologies: ["HTML", "CSS", "Bootstrap"],
         image: "./assets/images/gaming-store.png",
-        githubUrl: "#",
+        githubUrl: "https://github.com/RadiV22/Personal-web-demo",
         demoUrl: "#",
         featured: false,
     },
@@ -212,14 +212,14 @@ function setupContactForm() {
         }
         contactErrorText.textContent = "";
         const whatsappMessage = `
-Halo, saya ${name}.
+    Halo, saya ${name}.
 
-Email: ${email}
-Subject: ${subject}
+    Email: ${email}
+    Subject: ${subject}
 
-Pesan:
-${message}
-`;
+    Pesan:
+    ${message}
+    `;
         const encodedMessage = encodeURIComponent(whatsappMessage);
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
         window.open(whatsappUrl, "_blank");

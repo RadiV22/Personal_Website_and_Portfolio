@@ -5,7 +5,7 @@ const allProjectsData = [
         description: "Aplikasi buku tamu untuk menambahkan dan menampilkan pesan pengunjung.",
         technologies: ["HTML", "CSS", "JavaScript"],
         image: "./assets/images/guest-book.png",
-        githubUrl: "#",
+        githubUrl: "https://github.com/RadiV22/Interactive_guest_book",
         demoUrl: "#",
     },
     {
@@ -13,7 +13,7 @@ const allProjectsData = [
         description: "Dashboard untuk menampilkan, mencari, dan menghitung rata-rata nilai siswa.",
         technologies: ["HTML", "CSS", "TypeScript"],
         image: "./assets/images/student-dashboard.png",
-        githubUrl: "#",
+        githubUrl: "https://github.com/RadiV22/Student_Dashboard_Typescript",
         demoUrl: "#",
     },
     {
@@ -21,7 +21,7 @@ const allProjectsData = [
         description: "Aplikasi pencatatan pengeluaran dengan penyimpanan data menggunakan Local Storage.",
         technologies: ["HTML", "CSS", "JavaScript", "Local Storage"],
         image: "./assets/images/expense-tracker.png",
-        githubUrl: "#",
+        githubUrl: "https://github.com/RadiV22/Expense_tracker",
         demoUrl: "#",
     },
     {
@@ -29,7 +29,7 @@ const allProjectsData = [
         description: "Landing page responsive untuk memperkenalkan dan menjual produk gaming.",
         technologies: ["HTML", "CSS", "Bootstrap"],
         image: "./assets/images/gaming-store.png",
-        githubUrl: "#",
+        githubUrl: "https://github.com/RadiV22/Personal-web-demo",
         demoUrl: "#",
     },
 ];

@@ -11,6 +11,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #1f2937;
+  background-color: #f8f5ff;
 }
 
 a {
@@ -26,31 +27,41 @@ a {
 /* Navbar */
 .navbar {
   padding: 16px 0;
-  background-color: #ffffff;
+  background-color: #8b5cf6;
   border-bottom: 1px solid #e5e7eb;
 }
 
 .navbar-brand {
   font-size: 24px;
   font-weight: bold;
+  color: #ffffff;
 }
 
 .navbar .nav-link {
-  color: #4b5563;
+  color: #f5f3ff;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #6f42c1;
+   color: #ffffff;
 }
 
 .navbar .btn {
+  background-color: #ffffff;
+  color: #6f42c1;
+  border: none;
   border-radius: 8px;
+}
+
+.navbar .btn:hover {
+  background-color: #f3efff;
+  color: #6f42c1;
 }
 
 /* Hero Section */
 .hero-section {
   padding: 80px 0;
+  background-color: #f8f4ff;
 }
 
 .hero-content {
@@ -82,12 +93,15 @@ a {
 .hero-image {
   width: 100%;
   max-width: 420px;
+  padding: 8px;
+  background-color: #eee8ff;
+  border-radius: 20px;
 }
 
 /* Featured Projects */
 .projects-section {
   padding: 80px 0;
-  background-color: #f8f9fc;
+   background-color: #eee8ff;
 }
 
 .section-label {
@@ -184,7 +198,7 @@ a {
 /* Skills Section */
 .skills-section {
   padding: 80px 0;
-  background-color: #ffffff;
+   background-color: #fcfaff;
 }
 
 .skills-section h2 {
@@ -218,12 +232,13 @@ a {
   margin: 0;
   font-size: 16px;
   font-weight: 600;
+  color: #111827;
 }
 
 /* Contact Section */
 .contact-section {
   padding: 80px 0;
-  background-color: #f8f9fc;
+  background-color: #f5f0ff;
 }
 
 .contact-section h2 {
@@ -267,7 +282,7 @@ a {
 
 .footer-section {
   padding: 30px 0;
-  background-color: #ffffff;
+  background-color: #eee8ff;
   border-top: 1px solid #e5e7eb;
 }
 
@@ -305,6 +320,7 @@ a {
 /* All Projects Page */
 .all-projects-header {
   padding: 70px 0 40px;
+  background-color: #fbfaff;
 }
 
 .all-projects-header h1 {
@@ -323,6 +339,7 @@ a {
 
 .all-projects-section {
   padding: 20px 0 80px;
+  background-color: #f3efff;
 }
 
 /* Project Search */
@@ -383,7 +400,7 @@ a {
     font-size: 30px;
   }
 
-    .skills-section {
+  .skills-section {
     padding: 60px 0;
   }
 
