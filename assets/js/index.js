@@ -1,71 +1,74 @@
 "use strict";
 const projects = [
     {
-        title: "Guest Book",
-        description: "Aplikasi buku tamu untuk menambahkan dan menampilkan pesan pengunjung.",
-        technologies: ["HTML", "CSS", "JavaScript"],
-        image: "./assets/images/guest-book.png",
-        githubUrl: "https://github.com/RadiV22/Interactive_guest_book",
-        demoUrl: "#",
+        title: "BarberBro",
+        description: "A barbershop booking and management application with customer bookings, barber schedules, online payments through Midtrans Sandbox, and real-time updates for customers and staff.",
+        technologies: [
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Express",
+            "PostgreSQL",
+            "Prisma",
+            "Socket.IO",
+        ],
+        image: "./assets/images/barberbro.PNG",
+        githubUrl: "https://github.com/RadiV22/barbershop-management-app",
+        demoUrl: "",
         featured: true,
     },
     {
+        title: "Guest Book",
+        description: "Aplikasi buku tamu untuk menambahkan dan menampilkan pesan pengunjung.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        image: "./assets/images/guest-book.PNG",
+        githubUrl: "https://github.com/RadiV22/Interactive_guest_book",
+        demoUrl: "",
+        featured: false,
+    },
+    {
         title: "Student Dashboard",
-        description: "Dashboard untuk menampilkan, mencari, dan menghitung rata-rata nilai siswa.",
+        description: "A student dashboard for viewing and searching student records, with automatic calculation of average scores.",
         technologies: ["HTML", "CSS", "TypeScript"],
-        image: "./assets/images/student-dashboard.png",
+        image: "./assets/images/student-dashboard.PNG",
         githubUrl: "https://github.com/RadiV22/Student_Dashboard_Typescript",
-        demoUrl: "#",
+        demoUrl: "",
         featured: true,
     },
     {
         title: "Expense Tracker",
-        description: "Aplikasi pencatatan pengeluaran dengan penyimpanan data menggunakan Local Storage.",
+        description: "An expense tracking application that saves records in Local Storage to keep data available between visits.",
         technologies: ["HTML", "CSS", "JavaScript", "Local Storage"],
-        image: "./assets/images/expense-tracker.png",
+        image: "./assets/images/expense-tracker.PNG",
         githubUrl: "https://github.com/RadiV22/Expense_tracker",
-        demoUrl: "#",
+        demoUrl: "",
         featured: true,
     },
     {
         title: "Gaming Store",
         description: "Landing page responsive untuk memperkenalkan dan menjual produk gaming.",
         technologies: ["HTML", "CSS", "Bootstrap"],
-        image: "./assets/images/gaming-store.png",
+        image: "./assets/images/gaming-store.PNG",
         githubUrl: "https://github.com/RadiV22/Personal-web-demo",
-        demoUrl: "#",
+        demoUrl: "",
         featured: false,
     },
 ];
 const skills = [
-    {
-        name: "HTML",
-        icon: "fa-brands fa-html5",
-    },
-    {
-        name: "CSS",
-        icon: "fa-brands fa-css3-alt",
-    },
-    {
-        name: "JavaScript",
-        icon: "fa-brands fa-js",
-    },
-    {
-        name: "TypeScript",
-        icon: "fa-solid fa-code",
-    },
-    {
-        name: "Bootstrap",
-        icon: "fa-brands fa-bootstrap",
-    },
-    {
-        name: "Git",
-        icon: "fa-brands fa-git-alt",
-    },
-    {
-        name: "GitHub",
-        icon: "fa-brands fa-github",
-    },
+    { name: "HTML", icon: "fa-brands fa-html5" },
+    { name: "CSS", icon: "fa-brands fa-css3-alt" },
+    { name: "JavaScript", icon: "fa-brands fa-js" },
+    { name: "TypeScript", icon: "fa-solid fa-code" },
+    { name: "React", icon: "fa-brands fa-react" },
+    { name: "React Native", icon: "fa-brands fa-react" },
+    { name: "Tailwind CSS", icon: "fa-solid fa-palette" },
+    { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
+    { name: "Node.js", icon: "fa-brands fa-node-js" },
+    { name: "Express", icon: "fa-solid fa-server" },
+    { name: "PostgreSQL", icon: "fa-solid fa-database" },
+    { name: "Prisma", icon: "fa-solid fa-layer-group" },
+    { name: "Git", icon: "fa-brands fa-git-alt" },
+    { name: "GitHub", icon: "fa-brands fa-github" },
 ];
 function renderFeaturedProjects(projectData) {
     const featuredProjectsElement = document.getElementById("featuredProjects");
@@ -113,13 +116,17 @@ function renderFeaturedProjects(projectData) {
                   GitHub
                 </a>
 
-                <a
-                  href="${project.demoUrl}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo
-                </a>
+                                ${project.demoUrl && project.demoUrl !== "#"
+            ? `
+                      <a
+                        href="${project.demoUrl}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Live Demo
+                      </a>
+                    `
+            : ""}
               </div>
             </div>
           </article>
@@ -203,10 +210,7 @@ function setupContactForm() {
         const email = contactEmailInput.value.trim();
         const subject = contactSubjectInput.value.trim();
         const message = contactMessageInput.value.trim();
-        if (name === "" ||
-            email === "" ||
-            subject === "" ||
-            message === "") {
+        if (name === "" || email === "" || subject === "" || message === "") {
             contactErrorText.textContent = "Semua kolom wajib diisi.";
             return;
         }
@@ -222,9 +226,7 @@ function setupContactForm() {
     `;
         const encodedMessage = encodeURIComponent(whatsappMessage);
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-        window.open(whatsappUrl, "_blank");
-        localStorage.removeItem(contactDraftKey);
-        contactForm.reset();
+        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     });
 }
 renderFeaturedProjects(projects);

@@ -20,8 +20,12 @@ a {
 
 /* Jarak kiri dan kanan halaman */
 .page-container {
-  padding-left: 70px;
-  padding-right: 70px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 /* Navbar */
@@ -43,7 +47,7 @@ a {
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-   color: #ffffff;
+  color: #ffffff;
 }
 
 .navbar .btn {
@@ -101,7 +105,7 @@ a {
 /* Featured Projects */
 .projects-section {
   padding: 80px 0;
-   background-color: #eee8ff;
+  background-color: #eee8ff;
 }
 
 .section-label {
@@ -136,21 +140,31 @@ a {
 
 /* Project Card */
 .project-card {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   overflow: hidden;
   background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
+  border: 1px solid #e8e2f2;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgb(41 24 70 / 4%);
 }
 
 .project-image {
+  display: block;
   width: 100%;
   height: 220px;
   object-fit: cover;
+  object-position: top;
+  background-color: #f3efff;
+  border-bottom: 1px solid #e8e2f2;
 }
 
 .project-content {
-  padding: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 24px;
 }
 
 .project-content h3 {
@@ -183,7 +197,9 @@ a {
 
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
+  margin-top: auto;
 }
 
 .project-links a {
@@ -198,7 +214,7 @@ a {
 /* Skills Section */
 .skills-section {
   padding: 80px 0;
-   background-color: #fcfaff;
+  background-color: #fcfaff;
 }
 
 .skills-section h2 {
@@ -345,6 +361,70 @@ a {
 /* Project Search */
 .project-search {
   max-width: 500px;
+}
+
+/* Tombol utama mengikuti warna portofolio */
+.btn-primary {
+  --bs-btn-bg: #6f42c1;
+  --bs-btn-border-color: #6f42c1;
+  --bs-btn-hover-bg: #59359c;
+  --bs-btn-hover-border-color: #59359c;
+  --bs-btn-active-bg: #4c2d86;
+  --bs-btn-active-border-color: #4c2d86;
+  --bs-btn-disabled-bg: #6f42c1;
+  --bs-btn-disabled-border-color: #6f42c1;
+  --bs-btn-focus-shadow-rgb: 111, 66, 193;
+}
+
+/* Tombol kedua */
+.btn-outline-dark {
+  --bs-btn-color: #6f42c1;
+  --bs-btn-border-color: #6f42c1;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: #6f42c1;
+  --bs-btn-hover-border-color: #6f42c1;
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: #59359c;
+  --bs-btn-active-border-color: #59359c;
+  --bs-btn-focus-shadow-rgb: 111, 66, 193;
+}
+
+.hero-buttons .btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+  color: #6f42c1;
+  font-size: 20px;
+  border-radius: 8px;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.social-links a:hover {
+  color: #59359c;
+  background-color: #eee8ff;
+}
+
+/* Penanda fokus saat menggunakan keyboard */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #6f42c1;
+  outline-offset: 4px;
+}
+
+/* Warna fokus kolom formulir */
+.contact-section .form-control:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 0.2rem rgb(111 66 193 / 15%);
 }
 
 /* Tampilan mobile */
